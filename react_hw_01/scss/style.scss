@@ -1,0 +1,131 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700");
+
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_functions.scss";
+@import "_variables.scss";
+
+/* ------------------------------------------------------------------ */
+
+body {
+	font-family: var(--font-family);
+	background-color: black;
+}
+.wrapper {
+	min-block-size: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	main {
+		flex-grow: 1;
+	}
+}
+[class*="__container"] {
+	max-width: toRem($containerWidth);
+	margin-inline: auto;
+	inline-size: 100%;
+	// text-align: center;
+	padding-inline: toRem($containerPadding / 2);
+}
+
+// ****************************
+.main {
+	padding-block: toRem(30);
+	// .main__container
+	&__container {
+		background-color: black;
+		border-radius: toRem(30);
+	}
+	// .main__title
+	&__title {
+		font-size: toRem(60);
+		text-align: center;
+		text-decoration: underline;
+		color: var(--btn-bg);
+
+		margin-block-end: toRem(50);
+	}
+	// .main__task
+	&__task {
+		font-size: toRem(36);
+		text-transform: uppercase;
+		font-weight: 900;
+		text-decoration: underline;
+		color: blue;
+		text-align: center;
+		&:not(:last-child) {
+			margin-block-end: toRem(20);
+		}
+	}
+	// .main__list
+	&__list {
+		font-size: toRem(24);
+		color: white;
+		margin-block-end: toRem(10);
+		line-height: 1.5;
+	}
+}
+.list {
+	// .list__item
+	&__item {
+	}
+	// .list__link
+	&__link {
+		& p:first-child {
+			font-size: toRem(24);
+			color: yellow;
+			line-height: 1.2;
+			margin-block-end: toRem(5);
+			text-decoration: inherit;
+			transform: translateY(toRem(0));
+
+			transition:
+				color 0.3s,
+				text-decoration 0.3s,
+				transform 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--img-bghover);
+					text-decoration: underline;
+					transform: translateY(toRem(-2));
+
+					transition:
+						color 0.5s,
+						text-decoration 0.6s,
+						transform 0.6s;
+				}
+			}
+		}
+		& p {
+			font-size: toRem(20);
+			color: gray;
+			margin-block-end: toRem(15);
+		}
+	}
+}
+.body-task {
+	font-family: "Times New Roman", Times, serif;
+	background-color: gray;
+	text-align: center;
+
+	// .body-task__container
+	&__container {
+	}
+	// .body-task__title
+	&__title {
+		font-size: 72px;
+		color: yellowgreen;
+		margin-block: 30px;
+	}
+	// .body-task__description
+	&__description {
+		font-size: 36px;
+		color: white;
+		margin-block-end: 30px;
+		line-height: 1.2;
+		p {
+			margin-block-end: 5px;
+		}
+	}
+}

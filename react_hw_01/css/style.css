@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html,
+body {
+  line-height: 1;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+}
+
+/*-------------*/
+/* Adaptive Value */
+/* Variables */
+:root {
+  --font-family: "Manrope", sans-serif;
+  --main-tcolor: #999999;
+  --secondary-tcolor: #ffffff;
+  --third-tcolor: #bfbfbf;
+  --some-tcolor: #f1f1f3;
+  --dark-bg: #141414;
+  --dark-bg2: #1a1a1a;
+  --dark-bg3: #0f0f0f;
+  --dark-bg4: #1f1f1f;
+  --dark-bg5: #333333;
+  --btn-bg: #e50000;
+  --img-bghover: #f700ff;
+  --btn-bghover: linear-gradient(145deg, #00000063, #e50000);
+  --bd-coldark1: #262626;
+  --bd-colwhite: #ffffff;
+  --bd-colgrey: #999999;
+}
+
+/* ------------------------------------------------------------------ */
+body {
+  font-family: var(--font-family);
+  background-color: black;
+}
+
+.wrapper {
+  min-block-size: 100%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.wrapper main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  max-width: 101.875rem;
+  margin-inline: auto;
+  inline-size: 100%;
+  padding-inline: 0.9375rem;
+}
+
+.main {
+  padding-block: 1.875rem;
+}
+.main__container {
+  background-color: black;
+  border-radius: 1.875rem;
+}
+.main__title {
+  font-size: 3.75rem;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--btn-bg);
+  -webkit-margin-after: 3.125rem;
+          margin-block-end: 3.125rem;
+}
+.main__task {
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: underline;
+  color: blue;
+  text-align: center;
+}
+.main__task:not(:last-child) {
+  -webkit-margin-after: 1.25rem;
+          margin-block-end: 1.25rem;
+}
+.main__list {
+  font-size: 1.5rem;
+  color: white;
+  -webkit-margin-after: 0.625rem;
+          margin-block-end: 0.625rem;
+  line-height: 1.5;
+}
+
+.list__link p:first-child {
+  font-size: 1.5rem;
+  color: yellow;
+  line-height: 1.2;
+  -webkit-margin-after: 0.3125rem;
+          margin-block-end: 0.3125rem;
+  text-decoration: inherit;
+  -webkit-transform: translateY(0rem);
+      -ms-transform: translateY(0rem);
+          transform: translateY(0rem);
+  -webkit-transition: color 0.3s, -webkit-text-decoration 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, -webkit-text-decoration 0.3s, -webkit-transform 0.3s;
+  transition: color 0.3s, text-decoration 0.3s, transform 0.3s;
+  transition: color 0.3s, text-decoration 0.3s, transform 0.3s, -webkit-text-decoration 0.3s, -webkit-transform 0.3s;
+}
+@media (any-hover: hover) {
+  .list__link p:first-child:hover {
+    color: var(--img-bghover);
+    text-decoration: underline;
+    -webkit-transform: translateY(-0.125rem);
+        -ms-transform: translateY(-0.125rem);
+            transform: translateY(-0.125rem);
+    -webkit-transition: color 0.5s, -webkit-text-decoration 0.6s, -webkit-transform 0.6s;
+    transition: color 0.5s, -webkit-text-decoration 0.6s, -webkit-transform 0.6s;
+    transition: color 0.5s, text-decoration 0.6s, transform 0.6s;
+    transition: color 0.5s, text-decoration 0.6s, transform 0.6s, -webkit-text-decoration 0.6s, -webkit-transform 0.6s;
+  }
+}
+.list__link p {
+  font-size: 1.25rem;
+  color: gray;
+  -webkit-margin-after: 0.9375rem;
+          margin-block-end: 0.9375rem;
+}
+
+.body-task {
+  font-family: "Times New Roman", Times, serif;
+  background-color: gray;
+  text-align: center;
+}
+.body-task__title {
+  font-size: 72px;
+  color: yellowgreen;
+  margin-block: 30px;
+}
+.body-task__description {
+  font-size: 36px;
+  color: white;
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+  line-height: 1.2;
+}
+.body-task__description p {
+  -webkit-margin-after: 5px;
+          margin-block-end: 5px;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JSX з CDN</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<style>
+		body {
+			background-color: #1e1e1e;
+			font-family: sans-serif;
+			color: white;
+			line-height: 1.5;
+			font-size: 20px;
+		}
+
+		h1 {
+			color: yellow;
+			font-size: 40px;
+		}
+
+		.task {
+			max-width: 800px;
+			margin: 30px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		}
+
+		#root>div:nth-child(2) {
+			max-width: 600px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			font-size: 20px;
+		}
+
+		input {
+			padding: 10px;
+			background-color: #3a3a3a;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+
+		button {
+			padding: 10px 15px;
+			margin: 5px;
+			background-color: #444;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #555;
+		}
+
+		span {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+	<!-- JSX-код має бути всередині script з type="text/babel" -->
+	<script type="text/babel">
+		function Task() {
+			return (
+				<React.Fragment>
+					<div className="task">
+						<h1>Задача 3</h1>
+						<p>Задано початок та кінець діапазону. При натисканні на кнопку випадковим чином генерувати значення з вказаного діапазону та відображати його.</p>
+					</div>
+				</React.Fragment>
+			)
+		}
+		function RandomValue() {
+			const [minNum, setMinNum] = React.useState('')
+			const [maxNum, setMaxNum] = React.useState('')
+			const [result, setResult] = React.useState('')
+			//---------
+			function handlerMinRandomValue(event) {
+				setMinNum(event.target.value)
+			}
+			function handlerMaxRandomValue(event) {
+				setMaxNum(event.target.value)
+			}
+			function getRandomValue() {
+				let res
+				const min = parseInt(minNum)
+				const max = parseInt(maxNum)
+				if (isNaN(min) || isNaN(max) || min > max) {
+					res = 'Некоректні дані'
+				} else {
+					res = Math.floor(Math.random() * (max - min + 1)) + min
+					setResult(res)
+				}
+			}
+
+			//---------
+			return (
+				<div>
+					<label>
+						Введіть мінімальне значення :{' '}
+						<input type="number" value={minNum} onChange={handlerMinRandomValue} placeholder="Введіть мінімальне ціле число" />
+					</label>
+					<label>
+						Введіть максимальне значення :{' '}
+						<input type="number" value={maxNum} onChange={handlerMaxRandomValue} placeholder="Введіть максимальне ціле число" />
+					</label>
+					<hr />
+					<button onClick={getRandomValue}>Згенерувати</button>
+					<p>Згенероване число: {result}</p>
+				</div>
+			)
+		}
+
+		// Головний компонент App
+		function App() {
+			return (
+				<React.Fragment>
+					<Task />
+					<RandomValue />
+				</React.Fragment>
+			)
+		}
+
+		// Рендеримо компонент App у DOM
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+		root.render(<App />)
+	</script>
+</body>
+
+</html>

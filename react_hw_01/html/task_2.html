@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JSX з CDN</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<style>
+		body {
+			background-color: #1e1e1e;
+			font-family: sans-serif;
+			color: white;
+			line-height: 1.5;
+			font-size: 20px;
+		}
+
+		h1 {
+			color: yellow;
+			font-size: 40px;
+		}
+
+		.task {
+			max-width: 800px;
+			margin: 30px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		}
+
+		#root>div:nth-child(2) {
+			max-width: 600px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			font-size: 20px;
+		}
+
+		input {
+			padding: 10px;
+			background-color: #3a3a3a;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+
+		button {
+			padding: 10px 15px;
+			margin: 5px;
+			background-color: #444;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #555;
+		}
+
+		span {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+	<!-- JSX-код має бути всередині script з type="text/babel" -->
+	<script type="text/babel">
+		function Task() {
+			return (
+				<React.Fragment>
+					<div className="task">
+						<h1>Задача 2</h1>
+						<p>Вводиться номер місяця. Автоматично виводити рекомендований одяг (зима – пальто, літо – шорти ….).
+							Також автоматично виводити зображення з відповідним зображенням лісу
+							(зима – ліс зі снігом, осінь – жовтий ліс, …).</p>
+					</div>
+				</React.Fragment>
+			)
+		}
+
+		function SeasonRecommender() {
+			const [monthNumber, setMonthNumber] = React.useState('')
+			//---------
+			function handlerSeasonsChange(event) {
+				const value = event.target.value
+				if (value === '' || value > 12 || value < 1) setMonthNumber('')
+				else setMonthNumber(parseInt(value))
+			}
+			function updateSeasonInfo() {
+				let season, recommendedClothing, seasonImgSrc
+				switch (monthNumber) {
+					case 1:
+					case 2:
+					case 12:
+						season = 'Зима'
+						recommendedClothing = 'Пальто'
+						seasonImgSrc = '../img/winter.jpg'
+						break
+					case 3:
+					case 4:
+					case 5:
+						season = 'Весна'
+						recommendedClothing = 'Сорочка'
+						seasonImgSrc = '../img/spring.jpg'
+						break
+					case 6:
+					case 7:
+					case 8:
+						season = 'Літо'
+						recommendedClothing = 'Шорти'
+						seasonImgSrc = '../img/summer.jpg'
+						break
+					case 9:
+					case 10:
+					case 11:
+						season = 'Осінь'
+						recommendedClothing = 'Плащ'
+						seasonImgSrc = '../img/autumn.jpg'
+						break
+				}
+				return { season, recommendedClothing, seasonImgSrc }
+			}
+			const { season, recommendedClothing, seasonImgSrc } = updateSeasonInfo()
+
+			//---------
+			return (
+				<div>
+					<label>
+						Введіть номер місяця :{' '}
+						<input type="number" value={monthNumber} onChange={handlerSeasonsChange} placeholder="Введіть номер місяця" />
+					</label>
+					<hr />
+					<div>Пора року: {season}</div>
+					<div>Рекомендований одяг: {recommendedClothing}</div>
+					<img style={{ width: "400px" }} src={seasonImgSrc} alt="" />
+				</div>
+			)
+		}
+
+		// Головний компонент App
+		function App() {
+			return (
+				<React.Fragment>
+					<Task />
+					<SeasonRecommender />
+				</React.Fragment>
+			)
+		}
+
+		// Рендеримо компонент App у DOM
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+		root.render(<App />)
+	</script>
+</body>
+
+</html>

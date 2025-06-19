@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="../css/style.css">
+	<title>JSX з CDN</title>
+	<!-- React -->
+	<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<!-- ReactDOM -->
+	<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+	<!-- Babel для JSX -->
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<style>
+		body {
+			background-color: #1e1e1e;
+			font-family: sans-serif;
+			color: white;
+			line-height: 1.5;
+			font-size: 20px;
+		}
+
+		h1 {
+			color: yellow;
+			font-size: 40px;
+		}
+
+		.task {
+			max-width: 800px;
+			margin: 30px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+		}
+
+		#root>div:nth-child(2) {
+			max-width: 600px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #2c2c2c;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			font-size: 20px;
+		}
+
+		input {
+			padding: 10px;
+			background-color: #3a3a3a;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+
+		button {
+			padding: 10px 15px;
+			margin: 5px;
+			background-color: #444;
+			color: greenyellow;
+			border: 1px solid greenyellow;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: #555;
+		}
+
+		span {
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+	<!-- JSX-код має бути всередині script з type="text/babel" -->
+	<script type="text/babel">
+		function Task() {
+			return (
+				<React.Fragment>
+					<div className="task">
+						<h1>Задача 4</h1>
+						<p>“Рахунок у банку”</p>
+						<ol>Вимоги:</ol>
+						<li>1.Спочатку сума дорівнює 0грн. Змінити суму у гривнях можна або зарахуванням на рахунок, або зняттям.</li>
+						<li>2. Сума автоматично переводиться у долари та євро (фіксований курс задається у data).</li>
+						<li>3. можливість зарахувати суму (контролювати, щоб не була від’ємною)</li>
+						<li>4. можливість зняти (щоб не можна зняти більше ніж є на рахунку)</li >
+						<li>5. при виконанні зняття і зарахування коштів вираховувати 3% від суми (відображати кількість відсотків автоматично)</li >
+
+						<ol>При зміні суми :
+							<li>- якщо було зняття, то суму відображати червоним</li>
+							<li>- якщо було зарахування, то суму відображати зеленим</li>
+
+							<li>Якщо сума валюти менша за 100 то відображати червоним кольором, інакше - зеленим</li>
+						</ol>
+					</div>
+				</React.Fragment>
+			)
+		}
+		function Bankomat() {
+			const data = {
+				dollarRate: 41,
+				euroRate: 47,
+				feePercent: 3,
+				minAmountForGreen: 100,
+			}
+			const [totalAmount, setTotalAmount] = React.useState(0)
+			const [result, setResult] = React.useState(0)
+			const [textColor, setTextColor] = React.useState("")
+			const [message, setMessage] = React.useState('')
+			//---------
+			function handlerTotalAmount(event) {
+				const value = event.target.value;
+				const num = parseInt(value);
+				if (value === '' || isNaN(num) || num < 0) setTotalAmount('');
+				else setTotalAmount(num);
+			}
+			function getWithdraw() {
+				setMessage('')
+				if (isNaN(totalAmount) || (totalAmount + getTransactionFee(totalAmount)) > result)
+					setMessage('Некоректні дані: недостатньо коштів')
+				else {
+					setResult((prevSumm) => prevSumm - totalAmount - getTransactionFee(totalAmount))
+					setTextColor("red")
+				}
+			}
+			function getDeposit() {
+				setMessage('')
+				if (isNaN(totalAmount) || totalAmount < 0) setMessage('Некоректні дані: неправильна сума')
+				else {
+					setResult((prevSumm) => prevSumm + totalAmount - getTransactionFee(totalAmount))
+					setTextColor("green")
+				}
+			}
+			function convertToDollars() {
+				return result / data.dollarRate
+			}
+			function convertToEuros() {
+				return result / data.euroRate
+			}
+			function getTransactionFee(amount) {
+				if (isNaN(amount) || amount <= 0) return 0;
+				return amount * data.feePercent / 100;
+			}
+			function changeColor(amount) {
+				return amount < data.minAmountForGreen ? { color: 'red' } : { color: 'green' }
+			}
+			//---------
+			return (
+				<div>
+					<p>У Вас на рахунку: <span style={{ color: textColor }}>{result}</span> грн</p>
+					<label>
+						<input type="number" value={totalAmount} onChange={handlerTotalAmount} />
+					</label>
+					<button onClick={getWithdraw}>Зняття</button>
+					<button onClick={getDeposit}>Зарахування</button>
+					<p >Рахунок у доларах:<span style={changeColor(convertToDollars())}> {convertToDollars().toFixed(2)} $ </span></p>
+					<p >Рахунок у євро:<span style={changeColor(convertToEuros())}> {convertToEuros().toFixed(2)} € </span></p>
+					<p>Комісія 3%: {getTransactionFee(totalAmount).toFixed(2)} грн</p>
+					<p>{message}</p>
+				</div>
+			)
+		}
+		// Головний компонент App
+		function App() {
+			return (
+				<React.Fragment>
+					<Task />
+					<Bankomat />
+				</React.Fragment>
+			)
+		}
+		// Рендеримо компонент App у DOM
+		const root = ReactDOM.createRoot(document.getElementById('root'))
+		root.render(<App />)
+	</script>
+</body>
+
+</html>

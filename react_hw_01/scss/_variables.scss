@@ -1,0 +1,54 @@
+/* Variables */
+:root {
+	--font-family: "Manrope", sans-serif;
+
+	// --font-size2: toRem(14);
+	// --font-size3: toRem(18);
+	// --font-size4: toRem(20);
+	// --font-size5: toRem(12);
+	// --font-size-hero: toRem(38);
+
+	--main-tcolor: #999999;
+	--secondary-tcolor: #ffffff;
+	--third-tcolor: #bfbfbf;
+	--some-tcolor: #f1f1f3;
+
+	--dark-bg: #141414;
+	--dark-bg2: #1a1a1a;
+	--dark-bg3: #0f0f0f;
+	--dark-bg4: #1f1f1f;
+	--dark-bg5: #333333;
+
+	--btn-bg: #e50000;
+	--img-bghover: #f700ff;
+	--btn-bghover: linear-gradient(145deg, #00000063, #e50000);
+	--bd-coldark1: #262626;
+	--bd-colwhite: #ffffff;
+	--bd-colgrey: #999999;
+}
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1600;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$pc: toEm(1199.98);
+$tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: toEm(767.98); // Телефони L
+$mobileSmall: toEm(479.98); // Телефони S
+// Тип адаптива:
+// 1 = чуйність (у контейнера немає брейкпоінтів),
+// 2 = по брейк-поїнт (контейнер змінює свою ширину по брейк-поїнт)
+$responsiveType: 1;
+
+$filterImgHover: invert(26%) sepia(94%) saturate(4679%) hue-rotate(284deg) brightness(103%) contrast(137%);
+$filterImgHover0: invert(0) sepia(0) saturate(1) hue-rotate(0deg) brightness(1) contrast(1);
