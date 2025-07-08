@@ -1,0 +1,23 @@
+.result__container {
+  max-width: 500px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.result__msg {
+  color: red;
+  font-size: 30px;
+}
+
+.minLimitSpeedLimit {
+  background-color: orange;
+}
+
+.maxLimitSpeedLimit {
+  background-color: green;
+}
+
+.exceedingSpeedLimit {
+  background-color: red;
+}

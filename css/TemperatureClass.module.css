@@ -1,0 +1,15 @@
+.freezing {
+  background-color: white;
+}
+
+.cold {
+  background-color: blue;
+}
+
+.warm {
+  background-color: lightgreen;
+}
+
+.hot {
+  background-color: red;
+}

@@ -1,0 +1,6 @@
+.result__container {
+  max-width: 700px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}

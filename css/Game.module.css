@@ -1,0 +1,40 @@
+.result__container {
+  max-width: 700px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: center;
+}
+.result__digitTitle {
+  font-size: 30px;
+  -webkit-margin-after: 10px;
+          margin-block-end: 10px;
+}
+.result__digitArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+}
+.result__digit {
+  border: 1px solid yellowgreen;
+  font-size: 30px;
+  padding: 10px;
+  max-width: 50px;
+  width: 100%;
+  min-height: 60px;
+}
+
+.player__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
