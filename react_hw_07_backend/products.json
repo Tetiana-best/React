@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "categoryType": "laptop",
+    "title": "Ноутбук Dell XPS 13",
+    "price": 999.99,
+    "imageUrl": "https://picsum.photos/id/1011/600/400",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "categoryType": "laptop",
+    "title": "Ноутбук Apple MacBook Pro",
+    "price": 1299.99,
+    "imageUrl": "https://picsum.photos/id/1012/600/400",
+    "inStock": false,
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "categoryType": "laptop",
+    "title": "Ноутбук HP Pavilion",
+    "price": 849.99,
+    "imageUrl": "https://picsum.photos/id/1013/600/400",
+    "inStock": true,
+    "rating": 4.2
+  },
+  {
+    "id": 4,
+    "categoryType": "laptop",
+    "title": "Ноутбук ASUS ZenBook",
+    "price": 1099.99,
+    "imageUrl": "https://picsum.photos/id/1015/600/400",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 5,
+    "categoryType": "phone",
+    "title": "Смартфон Samsung Galaxy S21",
+    "price": 599.99,
+    "imageUrl": "https://picsum.photos/id/1016/600/400",
+    "inStock": true,
+    "rating": 4.4
+  },
+  {
+    "id": 6,
+    "categoryType": "phone",
+    "title": "Смартфон Apple iPhone 13",
+    "price": 799.99,
+    "imageUrl": "https://picsum.photos/id/1018/600/400",
+    "inStock": false,
+    "rating": 4.9
+  },
+  {
+    "id": 7,
+    "categoryType": "phone",
+    "title": "Смартфон Xiaomi Redmi Note 11",
+    "price": 699.99,
+    "imageUrl": "https://picsum.photos/id/1020/600/400",
+    "inStock": true,
+    "rating": 4.1
+  },
+  {
+    "id": 8,
+    "categoryType": "phone",
+    "title": "Смартфон OnePlus 9",
+    "price": 999.99,
+    "imageUrl": "https://picsum.photos/id/1021/600/400",
+    "inStock": true,
+    "rating": 4.3
+  },
+  {
+    "id": 9,
+    "categoryType": "tv",
+    "title": "Телевізор Samsung 55\" 4K",
+    "price": 1399.99,
+    "imageUrl": "https://picsum.photos/id/1024/600/400",
+    "inStock": false,
+    "rating": 4.7
+  },
+  {
+    "id": 10,
+    "categoryType": "tv",
+    "title": "Телевізор LG OLED 48\"",
+    "price": 899.99,
+    "imageUrl": "https://picsum.photos/id/1025/600/400",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 11,
+    "categoryType": "tv",
+    "title": "Телевізор Sony Bravia 65\"",
+    "price": 1599.99,
+    "imageUrl": "https://picsum.photos/id/1027/600/400",
+    "inStock": true,
+    "rating": 4.8
+  },
+  {
+    "id": 12,
+    "categoryType": "tv",
+    "title": "Телевізор Philips Ambilight 50\"",
+    "price": 1999.99,
+    "imageUrl": "https://picsum.photos/id/1028/600/400",
+    "inStock": false,
+    "rating": 4.9
+  },
+  {
+    "id": 13,
+    "categoryType": "monitor",
+    "title": "Монітор Dell 24\" Full HD",
+    "price": 249.99,
+    "imageUrl": "https://picsum.photos/id/1032/600/400",
+    "inStock": true,
+    "rating": 4.4
+  },
+  {
+    "id": 14,
+    "categoryType": "monitor",
+    "title": "Монітор Samsung 27\" Curved",
+    "price": 199.99,
+    "imageUrl": "https://picsum.photos/id/1033/600/400",
+    "inStock": true,
+    "rating": 4.1
+  },
+  {
+    "id": 15,
+    "categoryType": "monitor",
+    "title": "Монітор LG UltraWide 34\"",
+    "price": 349.99,
+    "imageUrl": "https://picsum.photos/id/1035/600/400",
+    "inStock": false,
+    "rating": 4.5
+  },
+  {
+    "id": 16,
+    "categoryType": "monitor",
+    "title": "Монітор Acer 23.8\" IPS",
+    "price": 299.99,
+    "imageUrl": "https://picsum.photos/id/1036/600/400",
+    "inStock": true,
+    "rating": 4.3
+  }
+]
