@@ -1,0 +1,78 @@
+.spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.dot {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #6a11cb, #2575fc);
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot1 {
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -9px;
+	animation-name: orbit1;
+	animation-duration: 1.8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.dot2 {
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -9px;
+	animation-name: orbit2;
+	animation-duration: 2.4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.dot3 {
+	top: 50%;
+	left: 50%;
+	margin: -9px 0 0 -9px;
+	animation-name: orbit3;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes orbit1 {
+	0% {
+		transform: rotate(0deg) translateX(30px) rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg) translateX(30px) rotate(-360deg);
+	}
+}
+
+@keyframes orbit2 {
+	0% {
+		transform: rotate(120deg) translateX(30px) rotate(-120deg);
+	}
+	100% {
+		transform: rotate(480deg) translateX(30px) rotate(-480deg);
+	}
+}
+
+@keyframes orbit3 {
+	0% {
+		transform: rotate(240deg) translateX(30px) rotate(-240deg);
+	}
+	100% {
+		transform: rotate(600deg) translateX(30px) rotate(-600deg);
+	}
+}

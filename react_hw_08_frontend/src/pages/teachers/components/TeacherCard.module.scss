@@ -1,0 +1,92 @@
+.teachers_card {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid #a5d6a7;
+	border-radius: 8px;
+	padding: 10px 16px;
+	background-color: #ffffff;
+	box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+	font-family: sans-serif;
+	margin-block-end: 0.5rem;
+
+	&__info {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid #4caf50;
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+
+			> div:first-child {
+				font-weight: bold;
+				color: #388e3c;
+				font-size: 16px;
+			}
+
+			> div:last-child {
+				color: #757575;
+				font-size: 14px;
+
+				&::before {
+					content: "Предмет: ";
+					font-weight: bold;
+					color: #424242;
+					margin: 0.5rem;
+				}
+			}
+		}
+	}
+
+	&__button {
+		button {
+			background-color: #2196f3;
+			color: white;
+			border: none;
+			padding: 6px 14px;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			transition: all 0.2s ease;
+
+			&:hover {
+				background-color: #5531e3;
+				transition: all 0.5s ease;
+			}
+			&.button--selected {
+				background-color: #4caf50;
+			}
+		}
+	}
+}
+
+.teachCard__actions {
+}
+
+.teachCard__buttonEdit {
+	background-color: #17d2eb;
+	padding-inline: 3rem;
+	&:hover {
+		background-color: #17d2eb;
+		transition: all 0.5s ease;
+	}
+}
+
+.teachCard__buttonDelete {
+	background-color: #ef0f40;
+	padding-inline: 3rem;
+	&:hover {
+		background-color: #ef0f40;
+		transition: all 0.5s ease;
+	}
+}
