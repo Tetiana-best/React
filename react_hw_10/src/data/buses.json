@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "route": "Київ → Львів",
+    "departureTime": "08:30",
+    "price": 450,
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop"
+  },
+  {
+    "id": 2,
+    "route": "Київ → Одеса",
+    "departureTime": "10:00",
+    "price": 500,
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop"
+  },
+  {
+    "id": 3,
+    "route": "Львів → Варшава",
+    "departureTime": "06:00",
+    "price": 1200,
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop"
+  },
+  {
+    "id": 4,
+    "route": "Одеса → Краків",
+    "departureTime": "21:00",
+    "price": 1350,
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&h=250&fit=crop"
+  }
+]

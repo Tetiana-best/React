@@ -1,0 +1,42 @@
+.hotel-item {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: center;
+	border: 1px solid lime;
+	margin-block-end: 1rem;
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+
+	// .hotel-item__info
+
+	&__info {
+		flex-basis: 65%;
+		display: flex;
+		gap: 2rem;
+		align-items: center;
+		margin-block-end: 1rem;
+		text-align: left;
+	}
+
+	// .hotel-item__image
+
+	&__image {
+	}
+
+	// .hotel-item__description
+
+	&__description {
+	}
+	&__button--selected {
+		background-color: limegreen;
+		color: yellow;
+		text-shadow: 2px -2px 1px #000;
+		text-decoration: underline;
+	}
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

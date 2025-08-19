@@ -1,0 +1,13 @@
+body.light {
+	--bg-color: #95898974;
+	--text-color: #000;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+body.dark {
+	--bg-color: #1a1a1a;
+	--text-color: #fff;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
