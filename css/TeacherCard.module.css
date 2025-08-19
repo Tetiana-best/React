@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.teachers_card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+          box-shadow: 0 3px 6px rgba(76, 175, 80, 0.2);
+  font-family: sans-serif;
+  -webkit-margin-after: 0.5rem;
+          margin-block-end: 0.5rem;
+}
+.teachers_card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+.teachers_card__info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #4caf50;
+}
+.teachers_card__info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.teachers_card__info div > div:first-child {
+  font-weight: bold;
+  color: #388e3c;
+  font-size: 16px;
+}
+.teachers_card__info div > div:last-child {
+  color: #757575;
+  font-size: 14px;
+}
+.teachers_card__info div > div:last-child::before {
+  content: "Предмет: ";
+  font-weight: bold;
+  color: #424242;
+  margin: 0.5rem;
+}
+.teachers_card__button button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.teachers_card__button button:hover {
+  background-color: #5531e3;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.teachers_card__button button.button--selected {
+  background-color: #4caf50;
+}
+
+.teachCard__buttonEdit {
+  background-color: #17d2eb;
+  padding-inline: 3rem;
+}
+.teachCard__buttonEdit:hover {
+  background-color: #17d2eb;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.teachCard__buttonDelete {
+  background-color: #ef0f40;
+  padding-inline: 3rem;
+}
+.teachCard__buttonDelete:hover {
+  background-color: #ef0f40;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
