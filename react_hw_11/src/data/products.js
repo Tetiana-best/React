@@ -1,0 +1,22 @@
+export const products = [
+  { id: 1, productsTitle: 'Яблуко', productsPrice: 25 },
+  { id: 2, productsTitle: 'Молоко', productsPrice: 40 },
+  { id: 3, productsTitle: 'Хліб', productsPrice: 18 },
+  { id: 4, productsTitle: 'Яблуко', productsPrice: 30 },
+  { id: 5, productsTitle: 'Сир', productsPrice: 120 },
+  { id: 6, productsTitle: 'Молоко', productsPrice: 42 },
+  { id: 7, productsTitle: 'Кава', productsPrice: 150 },
+  { id: 8, productsTitle: 'Чай', productsPrice: 90 },
+  { id: 9, productsTitle: 'Хліб', productsPrice: 20 },
+  { id: 10, productsTitle: 'Яблуко', productsPrice: 28 },
+  { id: 11, productsTitle: 'Шоколад', productsPrice: 70 },
+  { id: 12, productsTitle: 'Печиво', productsPrice: 55 },
+  { id: 13, productsTitle: 'Яблуко', productsPrice: 27 },
+  { id: 14, productsTitle: 'Молоко', productsPrice: 39 },
+  { id: 15, productsTitle: 'Сир', productsPrice: 130 },
+  { id: 16, productsTitle: 'Чай', productsPrice: 95 },
+  { id: 17, productsTitle: 'Кава', productsPrice: 145 },
+  { id: 18, productsTitle: 'Печиво', productsPrice: 50 },
+  { id: 19, productsTitle: 'Хліб', productsPrice: 19 },
+  { id: 20, productsTitle: 'Шоколад', productsPrice: 75 }
+]
