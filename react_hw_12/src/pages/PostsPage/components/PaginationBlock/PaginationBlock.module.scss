@@ -1,0 +1,48 @@
+.pagination {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	margin: 100px 5px 20px;
+}
+
+.pageBtn {
+	background: #23272f;
+	border: 1px solid #323843;
+	color: #e5e7eb;
+	padding: 8px 18px;
+	border-radius: 8px;
+	font-size: 1rem;
+	box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.18);
+	transition:
+		background 0.15s,
+		color 0.15s,
+		border 0.15s,
+		box-shadow 0.15s,
+		transform 0.15s;
+
+	&:hover:not(:disabled) {
+		background: #323843;
+		color: yellow;
+		border-color: #475569;
+		box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.28);
+		cursor: pointer;
+		transform: translateY(-1px) scale(1.04);
+	}
+
+	&:disabled {
+		color: #6b7280;
+		background: #1a1d23;
+		cursor: not-allowed;
+		border-color: #23272f;
+		box-shadow: none;
+	}
+}
+
+.active {
+	background: linear-gradient(90deg, #2563eb 0%, #1e293b 100%);
+	color: #fff;
+	border-color: #2563eb;
+	font-weight: 700;
+	box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18);
+}

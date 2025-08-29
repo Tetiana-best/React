@@ -1,0 +1,75 @@
+.newPostForm {
+  background: #23272f;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25), 0 1.5px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.25), 0 1.5px 4px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #323843;
+  padding: 28px;
+  margin: 50px;
+  max-width: 991.98px;
+  margin-inline: auto;
+}
+.newPostForm label {
+  display: block;
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.newPostForm label input,
+.newPostForm label textarea {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 14px;
+  border: 1px solid #323843;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #181b20;
+  color: #f3f4f6;
+  -webkit-transition: border 0.2s, background 0.2s;
+  transition: border 0.2s, background 0.2s;
+}
+.newPostForm label input:focus,
+.newPostForm label textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  background: #23272f;
+}
+.newPostForm label textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.newPostForm button {
+  background: -webkit-gradient(linear, left top, right top, from(#2563eb), to(#1e293b));
+  background: linear-gradient(90deg, #2563eb 0%, #1e293b 100%);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.1);
+          box-shadow: 0 2px 8px 0 rgba(37, 99, 235, 0.1);
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s, -webkit-box-shadow 0.2s, -webkit-transform 0.2s;
+}
+.newPostForm button:hover:not(:disabled) {
+  background: -webkit-gradient(linear, left top, right top, from(#1d4ed8), to(#334155));
+  background: linear-gradient(90deg, #1d4ed8 0%, #334155 100%);
+  -webkit-box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18);
+          box-shadow: 0 4px 16px 0 rgba(37, 99, 235, 0.18);
+  -webkit-transform: translateY(-1px) scale(1.03);
+      -ms-transform: translateY(-1px) scale(1.03);
+          transform: translateY(-1px) scale(1.03);
+}
+.newPostForm button:disabled, .newPostForm button[disabled=not-allowed] {
+  background: #334155;
+  color: #9ca3af;
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
