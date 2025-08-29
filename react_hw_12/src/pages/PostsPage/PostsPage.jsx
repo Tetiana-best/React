@@ -35,11 +35,14 @@ function PostsPage() {
 			{/* {status==='loading'? <Spinner />:null} */}
 			{status==='failed'? <div>{ error }</div>:null}
 
-			<PaginationBlock
-				currentPageNumber = {currentPageNumber}
-				totalPagesNumber = {totalPagesNumber}
-				onPageChange = {onPageChange} />
-		</>
+			{status !== "loading" && totalPagesNumber > 1 && (
+  <PaginationBlock
+    currentPageNumber={currentPageNumber}
+    totalPagesNumber={totalPagesNumber}
+    onPageChange={onPageChange}
+  />
+)}
+	</>
 	 );
 }
 

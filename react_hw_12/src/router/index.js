@@ -1,5 +1,7 @@
 import MainLayout from '@/layouts/MainLayout'
+import ErrorPage from '@/pages/ErrorPage'
 import Home from '@/pages/Home'
+import Page404 from '@/pages/Page404'
 import { PostsPage, PostsPageInfinity } from '@/pages/PostsPage'
 
 import { createBrowserRouter } from 'react-router'
@@ -8,6 +10,7 @@ export const routes = [
   {
     path: '/',
     Component: MainLayout,
+	 errorElement: ErrorPage,
     children: [
       {
         index: true,
@@ -30,6 +33,10 @@ export const routes = [
           title: 'PostsPageInfinity',
         },
       },
+		{
+			path: "*",
+			Component: Page404
+			},
     ],
   },
 ]
