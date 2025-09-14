@@ -1,0 +1,23 @@
+.gearLoader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: 100%;
+	padding: 2rem 0;
+	color: #2563eb;
+	font-size: 1.2rem;
+}
+
+.gearIcon {
+	animation: spin 1s linear infinite;
+	font-size: 1.5rem;
+	color: #888;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

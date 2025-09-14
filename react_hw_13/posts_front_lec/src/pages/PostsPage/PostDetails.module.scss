@@ -1,0 +1,22 @@
+.postDetails {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 20px;
+
+	/* Центруем содержимое */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	h3 {
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	p {
+		margin: 0.25rem 0;
+		color: #333;
+	}
+}

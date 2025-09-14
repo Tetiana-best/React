@@ -1,0 +1,35 @@
+.postsPageWrapper {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	background: #f9fafb; // светлый фон, можно поменять
+	min-height: 100vh;
+
+	h2 {
+		font-size: 2rem;
+		font-weight: 700;
+		color: #111827;
+		text-align: center;
+	}
+
+	.addPostBtn {
+		background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
+		color: #fff;
+		padding: 0.5rem;
+		width: fit-content;
+		border-radius: 0.5rem;
+		align-self: center;
+		text-decoration: none;
+		transition:
+			background 0.3s ease,
+			transform 0.3s ease;
+
+		&:hover {
+			background: linear-gradient(90deg, #16a34a 0%, #15803d 100%);
+			transform: scale(1.01);
+		}
+	}
+}

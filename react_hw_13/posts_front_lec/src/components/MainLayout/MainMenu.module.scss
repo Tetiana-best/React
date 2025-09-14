@@ -1,0 +1,48 @@
+.nav {
+	background: #f9f9f9;
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menuList {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	gap: 1rem;
+}
+
+.menuItem {
+	color: #000;
+	border: 1px solid transparent;
+	transition:
+		color 0.3s,
+		background 0.3s;
+	&:hover a {
+		color: #61dafb;
+		border: 1px solid #61dafb;
+	}
+}
+
+.link {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	font-size: 1.6rem;
+	padding: 0.3rem 0.5rem;
+	border-radius: 0.5rem;
+	transition:
+		color 0.3s,
+		background 0.3s;
+
+	&:hover {
+		background: #000;
+	}
+}
+
+.active {
+	color: #61dafb;
+	font-weight: 700;
+	text-decoration: underline;
+}
