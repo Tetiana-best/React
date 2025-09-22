@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Сборка или временные файлы
+dist/
+build/
+
+# Соседние папки, которые не нужно пушить
+../react_hw_14_frontend/
+../../react_hw_13/css/
+../css/
