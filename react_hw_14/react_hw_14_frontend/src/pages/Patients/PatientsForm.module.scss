@@ -1,0 +1,107 @@
+.formWrapper {
+	background: #181b20;
+	border-radius: 12px;
+	padding: 2rem;
+	margin: 2rem auto;
+	font-size: 1.3rem;
+	box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+	color: #fff;
+	max-width: 800px;
+	box-shadow: 0 0 20px 4px rgba(173, 255, 47, 0.7);
+
+	h2 {
+		font-size: 2.2rem;
+		font-weight: 700;
+		color: yellowgreen;
+		margin-bottom: 1.5rem;
+		text-align: center;
+	}
+}
+
+.loading {
+	text-align: center;
+	color: #9ca3af;
+	font-size: 1.2rem;
+	padding: 2rem 0;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	input,
+	select,
+	textarea {
+		background: #1f2229;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+		border-radius: 8px;
+		padding: 0.8rem 1rem;
+		font-size: 1.3rem;
+		color: #f3f4f6;
+		transition:
+			border 0.2s,
+			background 0.2s;
+
+		&:focus {
+			outline: none;
+			border-color: rgba(37, 99, 235, 0.6);
+			background: #252930;
+		}
+	}
+
+	textarea {
+		min-height: 100px;
+		resize: vertical;
+	}
+
+	/* Контейнер для кнопок */
+	.buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: flex-end;
+		margin-top: 1rem; // небольшой отступ сверху
+	}
+
+	button {
+		border: none;
+		border-radius: 6px;
+		padding: 0.6rem 1.2rem;
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition:
+			background 0.2s ease,
+			transform 0.2s ease;
+
+		&.save {
+			background: linear-gradient(90deg, #22c55e 0%, #166534 100%);
+			color: #fff;
+
+			&:hover {
+				background: linear-gradient(90deg, #16a34a 0%, #14532d 100%);
+				transform: scale(1.01);
+			}
+
+			&:disabled {
+				background: #374151;
+				cursor: not-allowed;
+			}
+		}
+
+		&.cancel {
+			background: linear-gradient(90deg, #ef4444 0%, #7f1d1d 100%);
+			color: #fff;
+
+			&:hover {
+				background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%);
+				transform: scale(1.01);
+			}
+		}
+	}
+}
