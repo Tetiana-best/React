@@ -14,3 +14,7 @@ build/
 ../react_hw_14_frontend/
 ../../react_hw_13/css/
 ../css/
+
+node_modules/
+package-lock.json
+
