@@ -39,8 +39,6 @@ return (
 	<div className={styles.appointmentsList}>
 		<h1>Список записів на прийом</h1>
 
-		{(isLoading) && <Spinner />}
-
 		<div className={styles.flexBox}>
 		<div className={styles.searchBox}>
 			<label>Пошук запису за прізвищем пацієнта</label>
@@ -51,7 +49,9 @@ return (
 			className={styles.addAppointmentBtn}> ➕ Новий запис
 		</Link>
 		</div>
-
+		{isLoading ? (
+			<Spinner />
+			) : (
 		<div className={styles.appointmentsTable}>
 		<div className={styles.tableHeader}>
 			<div>Пацієнт</div>
@@ -67,6 +67,7 @@ return (
 			<AppointmentItem key={appointmentData.id} appointmentData={appointmentData} />)
 		)):(<div>Немає записів...</div>)}
 		</div>
+			)}
 	</div>
 	);
 }

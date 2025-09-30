@@ -28,30 +28,31 @@ const filteredPatients = patientsList?.filter((patientData)=>
 return (
 	<div className={styles.patientsList}>
 		<h1>Лист пацієнтів</h1>
-
-		{isLoading && <Spinner />}
-		
 		<div className={styles.flexBox}>
 			<div className={styles.searchBox}>
 				<label>Пошук за прізвищем пацієнта</label>
 				<input type="text" value={searchName} onChange={handleInputSearch}
 				placeholder="Введіть прізвище пацієнта..."></input>
 			</div>
-			<Link to={frontRoutes.navigate.patients.create} className={styles.addPatientBtn}
-	> ➕ Новий пацієнт</Link>
+			<Link to={frontRoutes.navigate.patients.create} className={styles.addPatientBtn}>
+						 ➕ Новий пацієнт</Link>
 		</div>
-		<div className={styles.patientsTable}>
-		<div className={styles.tableHeader}>
-			<div>Ім'я</div>
-			<div>Телефон</div>
-			<div>E-mail</div>
-			<div>Діагноз</div>
-			<div></div>
-		</div>
-		{filteredPatients?.map((patientData) => (
-			<PatientItem key={patientData.id} patientData={patientData} />
-		))}
-		</div>
+		{isLoading ? (
+			<Spinner />
+			) : (
+				<div className={styles.patientsTable}>
+				<div className={styles.tableHeader}>
+					<div>Ім'я</div>
+					<div>Телефон</div>
+					<div>E-mail</div>
+					<div>Діагноз</div>
+					<div></div>
+				</div>
+				{filteredPatients?.map((patientData) => (
+					<PatientItem key={patientData.id} patientData={patientData} />
+				))}
+				</div>
+)}
 	</div>
 	);
 }

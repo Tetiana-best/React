@@ -10,11 +10,9 @@ function PatientsForm() {
 	const {id} = useParams()
 	const navigate = useNavigate()
 	
-	const {data:patientData, isLoading} = useGetPatientByIdQuery(id, {skip:!id})
-	const[updatePatients, {isLoading:saving}] = useUpdatePatientsMutation()
-	const[createPatients, {isLoading:creating}] = useCreatePatientsMutation()
-
-	const formError = patientError || updateError || createError
+	const {data:patientData, isLoading, isError: loadingError} = useGetPatientByIdQuery(id, {skip:!id})
+	const[updatePatients, {isLoading:saving, isError: updateError}] = useUpdatePatientsMutation()
+	const[createPatients, {isLoading:creating, isError: createError}] = useCreatePatientsMutation()
 	
 	const[formData, setFormData] = useState(()=>emptyPatientData)
 
@@ -41,11 +39,10 @@ function PatientsForm() {
 		<div className={styles.formWrapper}>
 		<h2>{id ? 'Редагування даних пацієнта' : 'Додавання нового пацієнта'}</h2>
 
-		{formError && 
-			<ErrorMessage>❌ Помилка при завантаженні або збереженні даних пацієнта</ErrorMessage>}
+		{loadingError && <div>Помилка завантаження пацієнта</div>}
 
 		{isLoading && <Spinner />}
-		{!isLoading && !formError && (
+		{!isLoading && !loadingError && (
 		<form onSubmit={onSave} className={styles.form}>
 			{patientInputFields.map((field, index) => (
 				<div key={index}>
@@ -56,6 +53,10 @@ function PatientsForm() {
 				/>
 				</div>
 			))}
+			{updateError || createError && 
+			<ErrorMessage>❌ Помилка при завантаженні або збереженні даних пацієнта
+				</ErrorMessage>}
+
 				<div className={styles.buttons}>
 					<button type="submit" className={styles.save} disabled={saving || creating}>
 						{saving || creating ? "Зберігається..." : saveButtonTitle}

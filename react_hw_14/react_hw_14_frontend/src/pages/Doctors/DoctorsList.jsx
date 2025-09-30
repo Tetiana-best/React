@@ -15,27 +15,30 @@ function DoctorsList() {
 		<div className={styles.doctorsList}>
 			<h1>Список лікарів</h1>
 
-			{isLoading && <Spinner />}
 			<Link to={frontRoutes.navigate.doctors.create} className={styles.addDoctorBtn}>Додати лікаря</Link>
 
-			<div className={styles.doctorsTable}>
-				<div className={styles.tableHeader}>
-					<div>Ім'я</div>
-					<div>Спеціальність</div>
-					<div>E-mail</div>
-					<div>Телефон</div>
-					<div>Кабінет</div>
-					<div>Часи прийому</div>
-					<div></div>
-				</div>
+		{isLoading ? (
+			<Spinner />
+				) : (
+				<div className={styles.doctorsTable}>
+					<div className={styles.tableHeader}>
+						<div>Ім'я</div>
+						<div>Спеціальність</div>
+						<div>E-mail</div>
+						<div>Телефон</div>
+						<div>Кабінет</div>
+						<div>Часи прийому</div>
+						<div></div>
+					</div>
 
-			{doctorsList?.length > 0 ? (
-				doctorsList.map((doctorData) => (
-					<DoctorItem key={doctorData.id} doctorData={doctorData} />))
-			) : (
-				<div>Лікарів не знайдено</div>
+				{doctorsList?.length > 0 ? (
+					doctorsList.map((doctorData) => (
+						<DoctorItem key={doctorData.id} doctorData={doctorData} />))
+				) : (
+					<div>Лікарів не знайдено</div>
+				)}
+				</div>
 			)}
-			</div>
 		</div>
 	);
 }
