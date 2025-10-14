@@ -1,0 +1,39 @@
+.input {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #a3ff12;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+  outline: none;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.input:focus {
+  border-color: #ffeb3b;
+  -webkit-box-shadow: 0 0 10px #a3ff12;
+          box-shadow: 0 0 10px #a3ff12;
+}
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

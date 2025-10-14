@@ -1,0 +1,27 @@
+.button {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #a3ff12;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  letter-spacing: 1px;
+}
+.button:hover {
+  background-color: #a3ff12;
+  color: #000;
+  -webkit-box-shadow: 0 0 10px #a3ff12;
+          box-shadow: 0 0 10px #a3ff12;
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.form {
+  background: rgba(10, 10, 10, 0.9);
+  border: 2px solid #a3ff12;
+  border-radius: 16px;
+  padding: 2rem 3rem;
+  max-width: 600px;
+  margin: 3rem auto;
+  -webkit-box-shadow: 0 0 25px rgba(163, 255, 18, 0.15);
+          box-shadow: 0 0 25px rgba(163, 255, 18, 0.15);
+  text-align: center;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+}
+
+h2 {
+  color: #a3ff12;
+  text-shadow: 0 0 8px rgba(163, 255, 18, 0.8);
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffeb3b;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 5px rgba(255, 235, 59, 0.4);
+}
+
+/* Відступи між input і кнопками */
+button {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+  .form {
+    padding: 1.5rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  button {
+    display: block;
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+}

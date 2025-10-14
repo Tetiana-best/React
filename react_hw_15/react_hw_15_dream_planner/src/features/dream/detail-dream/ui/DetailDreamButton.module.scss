@@ -1,0 +1,9 @@
+.detailDreamButton {
+	background: linear-gradient(90deg, #3b82f6 0%, #1e3a8a 100%);
+	&:hover {
+		background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+		box-shadow: 0 4px 12px rgba(37, 99, 235, 0.5);
+		text-decoration: underline;
+		color: #fff;
+	}
+}

@@ -1,0 +1,12 @@
+.deleteDreamButton {
+  background: -webkit-gradient(linear, left top, right top, from(#ef4444), to(#7f1d1d));
+  background: linear-gradient(90deg, #ef4444 0%, #7f1d1d 100%);
+}
+.deleteDreamButton:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#dc2626), to(#991b1b));
+  background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%);
+  -webkit-box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5);
+          box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5);
+  text-decoration: underline;
+  color: #fff;
+}

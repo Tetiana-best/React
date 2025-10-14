@@ -1,0 +1,36 @@
+.card {
+  background-color: #252525;
+  border: 2px solid #a3ff12;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0 2px 4px rgba(163, 255, 18, 0.1), 0 4px 8px rgba(163, 255, 18, 0.15), 0 8px 16px rgba(163, 255, 18, 0.2), 0 12px 24px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(163, 255, 18, 0.1), 0 4px 8px rgba(163, 255, 18, 0.15), 0 8px 16px rgba(163, 255, 18, 0.2), 0 12px 24px rgba(0, 0, 0, 0.3);
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.card:hover {
+  -webkit-transform: rotateX(1deg);
+          transform: rotateX(1deg);
+  -webkit-box-shadow: 0 4px 8px rgba(163, 255, 18, 0.2), 0 8px 16px rgba(163, 255, 18, 0.25), 0 12px 24px rgba(163, 255, 18, 0.3), 0 16px 32px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 8px rgba(163, 255, 18, 0.2), 0 8px 16px rgba(163, 255, 18, 0.25), 0 12px 24px rgba(163, 255, 18, 0.3), 0 16px 32px rgba(0, 0, 0, 0.4);
+  background-color: #1a1a1a;
+}
+.card h3 {
+  color: #ffeb3b;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.card p {
+  margin: 0.3rem 0;
+  font-size: 1.1rem;
+}
+.card span {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  color: violet;
+}

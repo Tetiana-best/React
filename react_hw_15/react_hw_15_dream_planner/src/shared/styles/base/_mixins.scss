@@ -1,0 +1,40 @@
+@mixin button-base {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $font-main;
+	border: none;
+	border-radius: $radius;
+	cursor: pointer;
+	transition: all $transition;
+}
+
+@mixin input-base {
+	width: 100%;
+	padding: 0.75rem 1rem;
+	border-radius: $radius;
+	border: 1px solid $color-border;
+	background: $color-bg-alt;
+	color: $color-text;
+	font-family: $font-main;
+	transition: border-color $transition;
+
+	&:focus {
+		border-color: $color-accent;
+		outline: none;
+	}
+}
+
+@mixin card-base {
+	background: $color-bg-alt;
+	border: 1px solid $color-border;
+	border-radius: $radius;
+	box-shadow: $shadow;
+	padding: 1rem;
+	transition: all $transition;
+}
+
+@mixin neon-border {
+	border: 1px solid $color-accent;
+	box-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
