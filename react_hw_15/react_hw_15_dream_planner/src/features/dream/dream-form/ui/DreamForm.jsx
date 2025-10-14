@@ -1,5 +1,5 @@
 import { frontRoutes } from "@/app/router/frontRoutes";
-import { Button } from "@/shared/ui/button/Button";
+import { Button } from "@/shared/ui/Button/Button";
 import { Input } from "@/shared/ui/input/Input";
 import { useNavigate } from "react-router";
 import styles from "./DreamForm.module.scss";
