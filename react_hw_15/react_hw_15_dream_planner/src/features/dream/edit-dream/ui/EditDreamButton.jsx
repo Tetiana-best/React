@@ -1,5 +1,5 @@
 import { frontRoutes } from "@/app/router/frontRoutes";
-import buttonStyles from "@/shared/ui/button/Button.module.scss";
+import buttonStyles from "@/shared/ui/Button/Button.module.scss";
 import { Link } from "react-router";
 import styles from "./EditDreamButton.module.scss";
 
