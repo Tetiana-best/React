@@ -7,6 +7,8 @@ const raw = import.meta.env.VITE_API_URL || 'http://localhost:4000'
 const API_BASE = raw.replace(/\/$/, '')
 export const FULL_API_URL = API_BASE + '/api'
 
+console.log('FULL_API_URL:', FULL_API_URL);
+
 const baseQuery = fetchBaseQuery({
   baseUrl: FULL_API_URL,
   credentials: 'include',
