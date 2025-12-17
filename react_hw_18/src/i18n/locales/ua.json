@@ -1,0 +1,92 @@
+{
+  "common": {
+    "SAVE": "Зберегти",
+	 "ADD": "Додати",
+    "LOADING": "Завантаження...",
+    "ERROR": "Помилка",
+    "LOGIN": "Вхід",
+    "SIGNUP": "Реєстрація",
+    "ONLY_AUTH": "Тільки для авторизованих користувачів",
+    "CART_EMPTY": "Кошик порожній",
+    "FAVORITES_EMPTY": "Немає улюблених товарів",
+    "TOTAL": "Загальна вартість:",
+    "PRICE": "Ціна",
+    "NAME": "Ім'я",
+    "EMAIL": "Email",
+    "OWNER": "Власник",
+    "IMAGE_URL": "Посилання на зображення",
+	 "CURRENCY": "₴",
+	 "LOGOUT": "Вийти"
+  },
+   "menu": {
+    "HOME": "Головна",
+    "PRODUCTS": "Товари",
+    "CART": "Кошик",
+    "FAVORITES": "Улюблені",
+    "USERS": "Користувачі"
+  },
+  "loginForm": {
+  "EMAIL_PLACEHOLDER": "Email",
+  "PASSWORD_PLACEHOLDER": "Пароль",
+  "SUBMIT": "Увійти",
+  "GOOGLE": "Увійти через Google",
+  "ERROR": "Помилка входу",
+  "GOOGLE_ERROR": "Помилка Google-автентифікації"
+},
+"signUpForm": {
+  "NAME_PLACEHOLDER": "Ім'я",
+  "EMAIL_PLACEHOLDER": "Email",
+  "PASSWORD_PLACEHOLDER": "Пароль",
+  "SUBMIT": "Зареєструватися",
+  "ERROR": "Помилка реєстрації"
+},
+"cart": {
+  "ADD": "Додати у",
+  "REMOVE": "Видалити"
+},
+"favorites": {
+  "REMOVE": "Видалити з улюбленого"
+},
+"product": {
+  "ADD": "Додати продукт",
+  "EDIT": "Редагувати",
+  "DELETE": "Видалити"
+},
+"user": {
+  "EDIT": "Редагувати користувача",
+  "DELETE": "Видалити користувача"
+},
+  "home": {
+    "title": "Вітаємо у Firebase Shop!"
+  },
+  "LoginPage": {
+    "title": "Вхід у Firebase Shop"
+  },
+  "UsersPage": {
+    "title": "Користувачі"
+  },
+  "UserEditPage": {
+    "title": "Редагування користувача"
+  },
+  "ProductsPage": {
+    "title": "Каталог продуктів"
+  },
+  "ProductEditPage": {
+    "title": "Редагування товару"
+  },
+  "ProductAddPage": {
+    "title": "Додавання товару"
+  },
+  "CartPage": {
+    "title": "Мій кошик"
+  },
+  "FavoritesPage": {
+    "title": "Улюблені товари"
+  },
+  "NotFoundPage": {
+    "title": "Сторінку не знайдено"
+  },
+  "ForbiddenPage": {
+    "title": "Доступ заборонено"
+  }
+}

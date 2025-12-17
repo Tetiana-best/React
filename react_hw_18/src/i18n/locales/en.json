@@ -1,0 +1,92 @@
+{
+  "common": {
+    "SAVE": "Save",
+    "LOADING": "Loading...",
+	 "ADD": "Add",
+    "ERROR": "Error",
+    "LOGIN": "Login",
+    "SIGNUP": "Sign Up",
+    "ONLY_AUTH": "Only for authorized users",
+    "CART_EMPTY": "Cart is empty",
+    "FAVORITES_EMPTY": "No favorite items",
+    "TOTAL": "Total",
+    "PRICE": "Price",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "OWNER": "Owner",
+    "IMAGE_URL": "Image URL",
+	 "CURRENCY": "₴",
+    "LOGOUT": "Logout"
+  },
+   "menu": {
+    "HOME": "Home",
+    "PRODUCTS": "Products",
+    "CART": "Cart",
+    "FAVORITES": "Favorites",
+    "USERS": "Users"
+  },
+  "loginForm": {
+  "EMAIL_PLACEHOLDER": "Email",
+  "PASSWORD_PLACEHOLDER": "Password",
+  "SUBMIT": "Login",
+  "GOOGLE": "Login with Google",
+  "ERROR": "Login error",
+  "GOOGLE_ERROR": "Google authentication error"
+},
+"signUpForm": {
+  "NAME_PLACEHOLDER": "Name",
+  "EMAIL_PLACEHOLDER": "Email",
+  "PASSWORD_PLACEHOLDER": "Password",
+  "SUBMIT": "Sign up",
+  "ERROR": "Registration error"
+},
+"favorites": {
+  "REMOVE": "Remove from favorites"
+},
+"product": {
+  "ADD": "Add product",
+  "EDIT": "Edit",
+  "DELETE": "Delete"
+},
+"user": {
+  "EDIT": "Edit user",
+  "DELETE": "Delete user"
+},
+"cart": {
+  "ADD": "Add to",
+  "REMOVE": "Remove"
+},
+  "home": {
+    "title": "Welcome to Firebase Shop!"
+  },
+  "LoginPage": {
+    "title": "Login to Firebase Shop"
+  },
+  "UsersPage": {
+    "title": "Users"
+  },
+  "UserEditPage": {
+    "title": "Edit User"
+  },
+  "ProductsPage": {
+    "title": "Product Catalog"
+  },
+  "ProductEditPage": {
+    "title": "Edit Product"
+  },
+  "ProductAddPage": {
+    "title": "Add Product"
+  },
+  "CartPage": {
+    "title": "My Cart"
+  },
+  "FavoritesPage": {
+    "title": "Favorites"
+  },
+  "NotFoundPage": {
+    "title": "Page not found"
+  },
+  "ForbiddenPage": {
+    "title": "Access forbidden"
+  }
+}
